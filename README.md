@@ -6,6 +6,15 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
+## Description
+This is a laravel 9+, infyom 5+ auth boiler plate. I created this boilerplate because infyom has now been over-complicated and now confusing to use. I struggled a bit with setting it up and know that many people will struggle with it. At the time of pushing this code, Laravel 11+ is the latest, but who cares?
+
+## Contents 
+It has tailwind,bootstrap 5, admin-lte, laravel 9. 
+
+## Instructions 
+Complete user auth. Just pull it and run `php artisan serve`, then run migrations. Make sure to set your database details in the .env
+Find the rest of instructions from [Infyom documentation](https://infyom.com/open-source/laravelgenerator/docs/9.0/installation.html)
 
 ## About Laravel
 
