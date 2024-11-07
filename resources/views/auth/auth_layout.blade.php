@@ -14,68 +14,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <!-- Styles -->
     {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
-    <link rel="stylesheet" href="{{ asset('../../css/app.css') }}">
-    <script src="{{ asset('../../js/app.js') }}"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-        }
-        .login-container {
-            max-width: 400px;
-            margin: 100px auto;
-        }
-        .card {
-            border: none;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        .card-body {
-            padding: 40px;
-        }
-        .btn-google {
-            background: #fff;
-            color: #757575;
-            border: 1px solid #ddd;
-            padding: 12px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        .btn-google:hover {
-            background: #f8f9fa;
-            border-color: #ddd;
-        }
-        .btn-google img {
-            width: 20px;
-            margin-right: 8px;
-        }
-        .divider {
-            display: flex;
-            align-items: center;
-            text-align: center;
-            margin: 20px 0;
-        }
-        .divider::before, .divider::after {
-            content: '';
-            flex: 1;
-            border-bottom: 1px solid #eee;
-        }
-        .divider span {
-            padding: 0 10px;
-            color: #777;
-            font-size: 0.9rem;
-        }
-    </style>
+    {{-- <link rel="stylesheet" href="../../css/app.css"> --}}
+
+    {{-- <link rel="stylesheet" href="{{ asset('/resources/css/app.css') }}"> --}}
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
+
 </head>
 <body>
+
     <div class="login-container">
         @yield('content')
-
     </div>
 
+    <script src="{{ asset('js/app.js') }}"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    
+
 </body>
 </html>

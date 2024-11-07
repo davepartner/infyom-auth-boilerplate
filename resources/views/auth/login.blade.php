@@ -1,12 +1,12 @@
 @extends('auth.auth_layout')
 
 @section('content')
-       
+
        <div class="text-center mb-4">
             <h1 class="h3">{{ config('app.name') }}</h1>
             <p class="text-muted">Sign in to your account</p>
         </div>
-        
+
         <div class="card">
             <div class="card-body">
                 <!-- Google Login Button -->
@@ -23,12 +23,12 @@
                 <!-- Email Login Form -->
                 <form method="post" action="{{ url('/login') }}">
                     @csrf
-                    
+
                     <div class="mb-3">
                         <label class="form-label">Email address</label>
-                        <input type="email" 
-                               name="email" 
-                               class="form-control @error('email') is-invalid @enderror" 
+                        <input type="email"
+                               name="email"
+                               class="form-control @error('email') is-invalid @enderror"
                                value="{{ old('email') }}"
                                placeholder="name@example.com">
                         @error('email')
@@ -38,8 +38,8 @@
 
                     <div class="mb-3">
                         <label class="form-label">Password</label>
-                        <input type="password" 
-                               name="password" 
+                        <input type="password"
+                               name="password"
                                class="form-control @error('password') is-invalid @enderror"
                                placeholder="Enter your password">
                         @error('password')
@@ -60,12 +60,14 @@
                     <button type="submit" class="btn btn-primary w-100">Sign in</button>
                 </form>
             </div>
+
+            <div class="text-center mt-4">
+                <p class="text-muted">
+                    Don't have an account?
+                    <a href="{{ route('register') }}" class="text-decoration-none text-grey-300">Create one</a>
+                </p>
+            </div>
         </div>
 
-        <div class="text-center mt-4">
-            <p class="text-muted">
-                Don't have an account? 
-                <a href="{{ route('register') }}" class="text-decoration-none text-grey-300">Create one</a>
-            </p>
-        </div>
+
         @endsection
